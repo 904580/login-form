@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --success-color:green;
+    --error-color: red;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: cornsilk;
+}
+
+h2{
+    text-align: center;
+}
+
+label{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-content{
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-content.error input{
+    border-color: var(--error-color);
+}
+
+.form-content.success input{
+    border-color: var(--success-color);
+}
+
+.form-content.error small{
+    visibility: visible;
+}
+
+.form-content small{
+    color: var(--error-color);
+    bottom: 5px;
+    left: 10px;
+    position: absolute;
+    background-color:white ;
+    visibility: hidden;
+    
+}
+
+.form{
+    position: relative;
+}
+
+.form :before, form:after{
+
+    content: "";
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: brown;
+    transform: skew(10deg, 10deg);
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+    z-index: -1;
+}
+
+.form:after{
+    transform: skew(-10deg,-10deg);
+}
+
+
+.main-content{
+    background-color: darksalmon;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px maroon;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid;
+}
+
+.submit{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: rgb(168, 20, 20);
+    color: white;
+    border-radius: 5px;
+    display: block;
+    border: 2px solid black;
+    cursor: pointer;
+}
